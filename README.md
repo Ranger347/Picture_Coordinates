@@ -1,2 +1,3 @@
 # Picture_Coordinates
-This project will use bash and python to take in a picture with gps coordinates to provide a decimal location of the place.
+
+This project uses bash and python to input an image file (mainly used with MP4 files) with gps coordinates to provide a decimal location of the place. The bash script uses exiftool, a command line tool used for extracting data out of an image or video file, and sends that information to a python script to do all the math. The python script then does the math, which can be found [here](https://www.rapidtables.com/convert/number/degrees-minutes-seconds-to-degrees.html). Simply, degrees + (minutes / 60) + (seconds / 3600) gives the result as a decimal. The result is then passed back to the bash script which outputs the final decimal as well as copies it to the clipboard.
